@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav {
+  background-color: rgb(35, 8, 35);
+  color: white;
+  padding-left: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.gameContainer {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.game {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 6vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  background-color: rgb(221, 213, 229);
+}
+
+.gameInfo {
+  margin-top: 100px;
+  padding: 0 120px;
+  text-align: center;
+}
+
+.imgBox > img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.info {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.5rem;
+  color: blue;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(224, 218, 230);
+  /* border: none; */
+  border-radius: 10px;
+  border-color: rgb(245, 240, 234);
+}
+
+@media only screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .game {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+
+  .box {
+    font-size: 15vw;
+  }
+  .gameInfo {
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  .info {
+    color: blue;
+    font-size: 30px;
+    margin: 20px;
+  }
+  .imgBox {
+    display: flex;
+    justify-content: center;
+  }
+}
